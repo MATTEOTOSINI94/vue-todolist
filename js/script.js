@@ -11,7 +11,18 @@ window.addEventListener("DOMContentLoaded", function (){
         methods:{
 
             generateNewElement(){
-                this.taskToDo.push(this.newTask)
+                let result = this.taskToDo.some((elemento) =>{
+                    return elemento.toLowerCase() === this.newTask.trim().toLowerCase()
+                })
+                if (result){
+                    return
+                }
+                this.taskToDo.push(this.newTask.toLowerCase())
+            },
+
+            deleteElement(indiceElementi){
+                this.taskToDo.splice(indiceElementi, 1);
+
             }
 
         }

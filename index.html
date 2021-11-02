@@ -31,12 +31,13 @@
               </div>
 
               <div class="list-item">
-                  <div class="list-group-item d-flex align-items-center py-3 box-my" v-for="elemento in taskToDo">
+                  <div class="list-group-item d-flex align-items-center py-3 box-my" v-for="(elemento,i) in taskToDo">
                     <div class="list-group-item-border"></div>
                     <input class="form-check-input me-2 " type="checkbox">
 
                     {{elemento}}
                     
+                    <button type="button" class="btn-close ms-auto" aria-label="Close" @click="deleteElement()"></button>
                   </div>
                   
               </div>
