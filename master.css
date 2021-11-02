@@ -1,0 +1,12 @@
+
+.box-my{
+    position: relative;
+}
+
+.list-group-item-border{
+    border: 2px solid red;
+    background: red;
+    height: 100%;
+    position: absolute;
+    left: 0;
+}
